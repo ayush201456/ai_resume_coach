@@ -3,6 +3,8 @@
 
 An advanced, AI-powered web application designed to automate resume screening, parse unstructured data, and evaluate candidate profiles against job descriptions using state-of-the-art Large Language Models (LLMs). Built with an optimized backend and ultra-fast inference APIs, this tool streamlines the hiring workflow by providing semantic analysis and contextual scoring.
 
+🌐 **Live Deployment:** [View the Application Live](https://d88rdyziae9iu.cloudfront.net/)
+
 ---
 
 ## 🌟 Key Features
