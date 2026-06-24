@@ -1,7 +1,7 @@
-```markdown
 # AI Resume Screening & Parsing Engine 🚀
 
 An advanced, AI-powered web application designed to automate resume screening, parse unstructured data, and evaluate candidate profiles against job descriptions using state-of-the-art Large Language Models (LLMs). Built with an optimized backend and ultra-fast inference APIs, this tool streamlines the hiring workflow by providing semantic analysis and contextual scoring.
+
 ---
 
 ## 🔗 Live Deployment
@@ -24,20 +24,18 @@ An advanced, AI-powered web application designed to automate resume screening, p
 
 The application follows a decoupled, asynchronous-ready architecture to process resume data efficiently:
 
-
 ```
-
-[User Interface / Postman]
-│
-▼ (Multipart Form Data: Resume + JD)
-[Flask Backend API]
-│
-├─► [NLP Text Extraction Pipeline] ──► Cleaned Text
-│
-▼ (Structured Prompt Construction)
+[User Interface / Postman] 
+       │
+       ▼ (Multipart Form Data: Resume + JD)
+[Flask Backend API] 
+       │
+       ├─► [NLP Text Extraction Pipeline] ──► Cleaned Text
+       │
+       ▼ (Structured Prompt Construction)
 [Groq API Gateway] ──► [Llama Inference Engine]
-│
-▼ (JSON Response Generation)
+       │
+       ▼ (JSON Response Generation)
 [Score & Feedback Delivery Engine]
 
 ```
@@ -65,45 +63,46 @@ The application follows a decoupled, asynchronous-ready architecture to process 
 
 1. **Clone the repository:**
 ```bash
-   git clone [https://github.com/yourusername/ai-resume-checker.git](https://github.com/yourusername/ai-resume-checker.git)
-   cd ai-resume-checker
+git clone https://github.com/yourusername/ai-resume-checker.git
+cd ai-resume-checker
 
 ```
+
 
 2. **Create and activate a virtual environment:**
-
 ```bash
-   python -m venv venv
-   # On Windows:
-   venv\Scripts\activate
-   # On macOS/Linux:
-   source venv/bin/activate
+python -m venv venv
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
 
 ```
+
 
 3. **Install the dependencies:**
-
 ```bash
-   pip install -r requirements.txt
+pip install -r requirements.txt
 
 ```
+
 
 4. **Configure environment variables:**
 Create a `.env` file in the root directory and add your API credentials:
-
 ```env
-   FLASK_APP=app.py
-   FLASK_ENV=development
-   GROQ_API_KEY=your_groq_api_key_here
+FLASK_APP=app.py
+FLASK_ENV=development
+GROQ_API_KEY=your_groq_api_key_here
 
 ```
+
 
 5. **Run the application:**
-
 ```bash
-   flask run
+flask run
 
 ```
+
 
 The backend API will be live at `http://127.0.0.1:5000/`.
 
@@ -122,18 +121,20 @@ Processes a resume against a provided job description.
 
 
 * **Example Response:**
-
 ```json
-    {
-      "status": "success",
-      "data": {
-        "match_score": "84%",
-        "key_alignments": ["Proficient in Python backend development", "Strong understanding of NLP architecture"],
-        "skill_gaps": ["Missing explicit Docker/Containerization experience"],
-        "verdict": "Highly Recommended for Interview Stage"
-      }
-    }
-    ```
+{
+  "status": "success",
+  "data": {
+    "match_score": "84%",
+    "key_alignments": ["Proficient in Python backend development", "Strong understanding of NLP architecture"],
+    "skill_gaps": ["Missing explicit Docker/Containerization experience"],
+    "verdict": "Highly Recommended for Interview Stage"
+  }
+}
+
+```
+
+
 
 ---
 
@@ -147,9 +148,7 @@ Processes a resume against a provided job description.
 
 ## 📈 Future Roadmap
 
-- [ ] Build a responsive frontend dashboard using HTML5/Tailwind CSS.
-- [ ] Implement batch resume processing utilizing an asynchronous task queue (Celery/Redis).
-- [ ] Containerize the full stack using Docker for seamless multi-environment deployment.
-- [ ] Deploy live via AWS infrastructure.
-
-```
+* [ ] Build a responsive frontend dashboard using HTML5/Tailwind CSS.
+* [ ] Implement batch resume processing utilizing an asynchronous task queue (Celery/Redis).
+* [ ] Containerize the full stack using Docker for seamless multi-environment deployment.
+* [x] Deploy live via AWS infrastructure.
